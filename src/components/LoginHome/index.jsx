@@ -1,42 +1,64 @@
 import React from 'react';
+import axios from 'axios';
 import {validateLogin} from '../validateInput/validateInput';
-import Validate from '../validateInput';
+// import Validate from '../validateInput';
 import styles from './login.module.css';
 import Bottom from '../Bottom';
 import Header from '../Header';
 import useForm from '../../hooks/useForm'
+import {useHistory} from 'react-router-dom'
+
 
 function LoginHome() {
+  const history = useHistory();
+  function postLogin() {
+    axios({
+      method: "POST",
+      url: "https://coinmaphiring.coinmap.tech/login",
+      data: {
+        email: values.username,
+        password: values.password,
+      },
+    })
+      .then((res) => {
+        localStorage.setItem("coinMapLogin", JSON.stringify(res.data));
+        history.push('/loginSuccess')
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }
   const { values, errors, handleChange, handleSubmit } = useForm(
-    login,
+    postLogin,
     validateLogin
   );
-  function login() {
-    // postLogin(values.username, values.password);
-  }
   return (
     <div className={styles["App"]}>
       <div className={styles["container"]}>
         <Header />
         <div className={styles["login"]}>
           <h1 className={styles["name"]}>Login</h1>
-          <form onSubmit={handleSubmit}>
-            <input 
-              type="text" 
+          <form onSubmit={handleSubmit} noValidate>
+            <input
+              type="text"
+              name="username"
+              placeholder="Fill your email Or UserName address"
               className={styles["email"]} 
-              placeholder="Email" 
               onChange={handleChange}
               value={values.username || ""}
-              />
-              <Validate errors={errors.username} />
+              required
+            />
+            <p>{errors.username}</p>
             <input
               type="password"
+              name="password"
               className={styles["password"]}
               placeholder="Password"
               onChange={handleChange}
               value={values.password || ""}
+              required
             ></input>
-            <Validate errors={errors.password} />
+            <p>{errors.password}</p>
             <img className={styles["mat"]} src="/assets/img/mat.png" alt="mat" />
 
             <input type="checkbox" className={styles["check"]} />
