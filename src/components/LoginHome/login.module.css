@@ -1,0 +1,162 @@
+.container{
+    position: absolute;
+    width: 390px;
+    height: 577px;
+    left: 0;
+    top: 0px;
+    /* background-image: rgba(30, 40, 66, 0.7); */
+    background: url(../../../public/assets/img/FPK_device02_PSD_SM_Batch_72.png);
+    background-repeat: no-repeat;
+  
+  }
+.login{
+    height: 507px;
+    top: 70px;
+  }
+.name{
+    position: absolute;
+    width: 76px;
+    height: 30px;
+    left: 30px;
+    top: 110px;
+    margin: 0px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 30px;
+    color: #FFFFFF;
+  }
+.email{
+    box-sizing: border-box;
+    position: absolute;
+    width: 330px;
+    height: 44px;
+    left: 30px;
+    top: 164px;
+    background: #FFFFFF;
+    border: 1px solid #F2F1F1;
+    border-radius: 4px;
+  }
+.password{
+    box-sizing: border-box;
+    position: absolute;
+    width: 329px;
+    height: 44px;
+    left: 30px;
+    top: 232px;
+    background: #FFFFFF;
+    border: 1px solid #F2F1F1;
+    border-radius: 4px;
+    }
+.mat{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 327px;
+    top: 246px;
+    }
+.check{
+    box-sizing: border-box;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 30px;
+    top: 301px;
+    background: #FFFFFF;
+    border: 1px solid #F2F1F1;
+    border-radius: 14px;
+    }
+.remember{
+    position: absolute;
+    width: 106px;
+    height: 17px;
+    left: 62px;
+    top: 305px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    color: #FFFFFF;
+    }
+.forgotPassword{
+    position: absolute;
+    width: 134px;
+    height: 17px;
+    left: 225px;
+    top: 305px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    text-align: right;
+    background: linear-gradient(90deg, #00BFE4 -0.01%, #00BFE4 43.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+  }
+.btn-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 16px;
+    position: absolute;
+    width: 329px;
+    height: 44px;
+    left: 30px;
+    top: 373px;
+    background: linear-gradient(270deg, #5D3293 0%, #A23293 100%);
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+    border-radius: 6px;
+  }
+.btn-login--name{
+    width: 119px;
+    height: 34px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    /* or 133% */
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    flex: none;
+    /* order: 0; */
+    /* flex-grow: 1; */
+  }
+.account {
+    position: absolute;
+    width: 130px;
+    height: 17px;
+    left: 81px;
+    top: 465px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    color: #FFFFFF;
+  }
+.register{
+    position: absolute;
+    width: 93px;
+    height: 17px;
+    left: 215px;
+    top: 465px;
+  
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    background: linear-gradient(90deg, #00BFE4 -0.01%, #00BFE4 43.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }

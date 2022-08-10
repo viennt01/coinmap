@@ -1,0 +1,22 @@
+.header {
+    position: absolute;
+    width: 390px;
+    left: calc(50% - 390px/2);
+    height: 70px;
+    top: 0;
+    background: #1D2842;
+}
+.logo {
+    position: absolute;
+    width: 178px;
+    height: 33px;
+    left: calc(50% - 178px/2 - 94px);
+    top: 19px;
+}
+.topbar{
+    position: absolute;
+    width: 20px;
+    height: 14px;
+    left: calc(50% - 20px/2 + 166px);
+    top: 28px;
+}

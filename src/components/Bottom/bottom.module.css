@@ -1,0 +1,83 @@
+.bottom{
+    position: absolute;
+    background: #0c122a;
+    width: 390px;
+    /* left: calc(50% - 390px/2); */
+    top: 577px;
+    height: 374px;
+  }
+.logo-bottom{
+    position: absolute;
+    width: 244px;
+    height: 46px;
+    left: calc(50% - 244px/2);
+    bottom: 288px;
+    text-align: center;
+  }
+.content{
+    position: absolute;
+    width: 366px;
+    height: 96px;
+    left: calc(50% - 366px/2);
+    bottom: 168px;
+    margin: 0px;
+  
+    /* highlight-18 */
+  
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* or 133% */
+  
+    text-align: center;
+  
+    color: #616887;
+  }
+.facebook{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: calc(50% - 24px/2 - 60px);
+    bottom: 96px;
+  }
+.twitter{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: calc(50% - 24px/2 - 20px);
+    bottom: 96px;
+  }
+.telegram{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: calc(50% - 24px/2 + 20px);
+    bottom: 96px;
+  }
+.youtube{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: calc(50% - 24px/2 + 60px);
+    bottom: 96px;
+  }
+.copyright{
+    position: absolute;
+    width: 248px;
+    height: 24px;
+    left: calc(50% - 248px/2 + 2px);
+    bottom: 40px;
+  
+    font-family: 'Archivo';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+  
+    text-align: center;
+  
+    color: #616887;
+  }
