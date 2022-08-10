@@ -1,17 +1,21 @@
+button{
+  border-width: 0px;
+}
 .container{
     position: absolute;
     width: 390px;
     height: 577px;
     left: 0;
     top: 0px;
-    /* background-image: rgba(30, 40, 66, 0.7); */
     background: url(../../../public/assets/img/FPK_device02_PSD_SM_Batch_72.png);
     background-repeat: no-repeat;
   
   }
 .login{
-    height: 507px;
+    height: 577px;
     top: 70px;
+    background-color: #0f1736;
+    opacity: 0.95;
   }
 .name{
     position: absolute;
@@ -74,6 +78,7 @@
     background: #FFFFFF;
     border: 1px solid #F2F1F1;
     border-radius: 14px;
+    margin: 0;
     }
 .check:hover {
   cursor: pointer;
@@ -134,7 +139,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 35px;
     /* or 133% */
     /* display: flex; */
     align-items: center;

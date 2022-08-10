@@ -8,10 +8,10 @@
     background-repeat: no-repeat;
   }
   .login{
-    background: #1D2842;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
+    height: 577px;
+    top: 70px;
+    background-color: #0f1736;
+    opacity: 0.95;
   }
 .tickgreen{
     position: absolute;
@@ -31,7 +31,6 @@
   }  
 .title{
     position: absolute;
-    width: 149px;
     height: 30px;
     left: 70px;
     top: 110px;
@@ -46,7 +45,6 @@
   }
 .status{
     position: absolute;
-    width: 329px;
     height: 17px;
     left: 30px;
     top: 156px;

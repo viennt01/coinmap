@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import axios from 'axios';
 import {validateLogin} from '../validateInput/validateInput';
-// import Validate from '../validateInput';
+import Validate from '../validateInput';
 import styles from './login.module.css';
 import Footer from '../Footer';
 import Header from '../Header';
@@ -30,11 +30,13 @@ function LoginHome() {
       },
     })
       .then((res, err) => {
+        console.log(err);
         if(res.data.error_code === "SUCCESS"){
           localStorage.setItem("coinMapLogin", JSON.stringify(res.data));
-          history.push('/loginSuccess', JSON.stringify(res.data));
+          history.push('/loginSuccess');
         }else{
           console.error(err);
+          
         }
       })
       .catch((err) => {
@@ -61,7 +63,7 @@ function LoginHome() {
               value={values.username || ""}
               required
             />
-            <p>{errors.username}</p>
+            <Validate errors={errors.username} />
             <input
               type={type}
               name="password"
@@ -71,7 +73,7 @@ function LoginHome() {
               value={values.password || ""}
               required
             ></input>
-            <p>{errors.password}</p>
+            <Validate errors={errors.password} />
             <img className={styles["mat"]} src="/assets/img/mat.png" alt="mat" onClick={handleToggle} />
 
             <input type="checkbox" className={styles["check"]} />

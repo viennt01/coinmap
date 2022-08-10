@@ -1,8 +1,8 @@
 .MuiTooltipPopper {
     position: absolute;
     will-change: transform;
-    top: 0px;
-    left: 0px;
+    top: 198px;
+    left: -580px;
     transform: translate3d(620px, 12px, 0px);
 }
 
@@ -17,12 +17,12 @@
     font-weight: 400 !important;
     max-width: 333px !important;
     padding: 5px 15px !important;
-    line-height: 1.4em;
+    line-height: 0.7em;
     border-radius: 4px;
     background: #f63b3b !important;
 }
 
-.MuiTooltipArrow {
+/* .MuiTooltipArrow {
     color: rgba(97, 97, 97, 0.9);
     top: 4px;
     overflow: hidden;
@@ -45,4 +45,4 @@
     transform: rotate(45deg);
     background-color: currentColor;
     transform-origin: 100% 100%;
-}
+} */

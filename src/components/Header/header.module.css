@@ -5,6 +5,7 @@
     height: 70px;
     top: 0;
     background: #1D2842;
+    z-index: 3;
 }
 .logo {
     position: absolute;
