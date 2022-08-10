@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState} from 'react';
 import axios from 'axios';
 import {validateLogin} from '../validateInput/validateInput';
 // import Validate from '../validateInput';
 import styles from './login.module.css';
-import Bottom from '../Bottom';
+import Footer from '../Footer';
 import Header from '../Header';
 import useForm from '../../hooks/useForm'
 import {useHistory} from 'react-router-dom'
@@ -11,6 +11,15 @@ import {useHistory} from 'react-router-dom'
 
 function LoginHome() {
   const history = useHistory();
+  const [type, setType]=useState('password');
+  const handleToggle=()=>{    
+    if(type==='password'){     
+      setType('text');
+    }
+    else{   
+      setType('password');
+    }
+  }
   function postLogin() {
     axios({
       method: "POST",
@@ -20,9 +29,13 @@ function LoginHome() {
         password: values.password,
       },
     })
-      .then((res) => {
-        localStorage.setItem("coinMapLogin", JSON.stringify(res.data));
-        history.push('/loginSuccess')
+      .then((res, err) => {
+        if(res.data.error_code === "SUCCESS"){
+          localStorage.setItem("coinMapLogin", JSON.stringify(res.data));
+          history.push('/loginSuccess', JSON.stringify(res.data));
+        }else{
+          console.error(err);
+        }
       })
       .catch((err) => {
         console.error(err);
@@ -42,7 +55,7 @@ function LoginHome() {
             <input
               type="text"
               name="username"
-              placeholder="Fill your email Or UserName address"
+              placeholder="Email"
               className={styles["email"]} 
               onChange={handleChange}
               value={values.username || ""}
@@ -50,7 +63,7 @@ function LoginHome() {
             />
             <p>{errors.username}</p>
             <input
-              type="password"
+              type={type}
               name="password"
               className={styles["password"]}
               placeholder="Password"
@@ -59,7 +72,7 @@ function LoginHome() {
               required
             ></input>
             <p>{errors.password}</p>
-            <img className={styles["mat"]} src="/assets/img/mat.png" alt="mat" />
+            <img className={styles["mat"]} src="/assets/img/mat.png" alt="mat" onClick={handleToggle} />
 
             <input type="checkbox" className={styles["check"]} />
             <span className={styles["remember"]}>Remember me</span>
@@ -76,7 +89,7 @@ function LoginHome() {
           <span className={styles["register"]}>Register now?</span>
         </div>
       </div>
-      <Bottom />
+      <Footer />
     </div>
   );
 }

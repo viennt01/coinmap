@@ -1,5 +1,5 @@
 import styles from './loginSuccess.module.css';
-import Bottom from '../Bottom';
+import Footer from '../Footer';
 import Header from '../Header';
 
 function LoginSuccessFull() {
@@ -20,7 +20,7 @@ function LoginSuccessFull() {
           <p className={styles["status"]}>You can now use all features on the platform</p>
         </div>
       </div>
-      <Bottom />
+      <Footer />
     </div>
   );
 }

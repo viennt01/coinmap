@@ -7,6 +7,12 @@
     background: url(../../../public/assets/img/FPK_device02_PSD_SM_Batch_72.png);
     background-repeat: no-repeat;
   }
+  .login{
+    background: #1D2842;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
 .tickgreen{
     position: absolute;
     left: 7.69%;
@@ -14,12 +20,14 @@
     top: 109px;
     background: #C8E6C9;
     border-radius: 50%;
+    z-index: 3;
     }
 .tick{
     position: absolute;
     left: 9.45%;
     right: 85.45%;
     top: 117.47px;
+    z-index: 4;
   }  
 .title{
     position: absolute;
@@ -34,6 +42,7 @@
     font-size: 28px;
     line-height: 30px;
     color: #FFFFFF;
+    z-index: 4;
   }
 .status{
     position: absolute;
@@ -48,6 +57,7 @@
     font-size: 16px;
     line-height: 17px;
     color: #FFFFFF;
+    z-index: 4;
   }
   
 .bottom{

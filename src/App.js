@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import './App.css';
 // import routes from './routes';
 import Login from './pages/Login';
@@ -10,12 +10,12 @@ function App() {
   const useLogin = localStorage.getItem('coinMapLogin');
   return (
     <div className='App'>
-                <BrowserRouter>
-                  <Switch>
-                    <Route path="/" exact component={Login} />
-                    { useLogin && <Route path="/loginSuccess" component={LoginSuccess}  />  }
-                  </Switch>
-                </BrowserRouter>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" exact component={Login} />
+            {useLogin ? <Route path="/loginSuccess" component={LoginSuccess}  />  : <Redirect to="/" component={Login} />} 
+          </Switch>
+        </BrowserRouter>
     </div>
   );
 }

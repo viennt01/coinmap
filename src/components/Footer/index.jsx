@@ -1,5 +1,5 @@
-import styles from './bottom.module.css';
-function Bottom() {
+import styles from './Footer.module.css';
+function Footer() {
     return (
         <div className={styles["bottom"]}>
         <div className={styles["logo-bottom"]}>
@@ -28,4 +28,4 @@ function Bottom() {
       </div>
     )
 }
-export default Bottom;
+export default Footer;
