@@ -13,7 +13,8 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={Login} />
-            {useLogin ? <Route path="/loginSuccess" component={LoginSuccess}  />  : <Redirect to="/" component={Login} />} 
+            {useLogin && <Route path="/loginSuccess" component={LoginSuccess}  /> } 
+            {/* <Route path="/loginSuccess" component={LoginSuccess}  /> */}
           </Switch>
         </BrowserRouter>
     </div>
