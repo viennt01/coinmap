@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import axios from 'axios';
 import {validateLogin} from '../validateInput/validateInput';
-import Validate from '../validateInput';
+
 import styles from './login.module.css';
 import Footer from '../Footer';
 import Header from '../Header';
@@ -12,6 +12,7 @@ import {useHistory} from 'react-router-dom'
 function LoginHome() {
   const history = useHistory();
   const [type, setType]=useState('password');
+  const [notification, setNotification] = useState("");
   const handleToggle=()=>{    
     if(type==='password'){     
       setType('text');
@@ -29,14 +30,13 @@ function LoginHome() {
         password: values.password,
       },
     })
-      .then((res, err) => {
-        console.log(err);
+      .then((res) => {
         if(res.data.error_code === "SUCCESS"){
           localStorage.setItem("coinMapLogin", JSON.stringify(res.data));
           history.push('/loginSuccess');
+          setNotification("");
         }else{
-          console.error(err);
-          
+          setNotification("Email or password incorrect!");
         }
       })
       .catch((err) => {
@@ -52,7 +52,12 @@ function LoginHome() {
       <div className={styles["container"]}>
         <Header />
         <div className={styles["login"]}>
-          <h1 className={styles["name"]}>Login</h1>
+        <div className={styles["login"]}>
+          <div className={styles["name"]}>
+            <span>Login</span>
+            <span className={styles["notification"]}>{notification}</span>
+          </div>
+          </div>
           <form onSubmit={handleSubmit} noValidate>
             <input
               type="text"
@@ -63,7 +68,9 @@ function LoginHome() {
               value={values.username || ""}
               required
             />
-            <Validate errors={errors.username} />
+            <p className={styles["errorsUsername"]}>
+                  {errors.username}
+            </p>
             <input
               type={type}
               name="password"
@@ -72,8 +79,10 @@ function LoginHome() {
               onChange={handleChange}
               value={values.password || ""}
               required
-            ></input>
-            <Validate errors={errors.password} />
+            />
+            <p className={styles["errorsPassword"]}>
+                  {errors.password}
+            </p>
             <img className={styles["mat"]} src="/assets/img/mat.png" alt="mat" onClick={handleToggle} />
 
             <input type="checkbox" className={styles["check"]} />

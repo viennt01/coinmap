@@ -17,9 +17,17 @@ button{
     background-color: #0f1736;
     opacity: 0.95;
   }
+.notification{
+    left: 5px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-size: 15px;
+    line-height: 30px;
+    color: #f90808ed;
+    margin-left: 70px;
+}
 .name{
     position: absolute;
-    width: 76px;
     height: 30px;
     left: 30px;
     top: 110px;
@@ -181,4 +189,22 @@ button{
   }
 .register:hover {
   cursor: pointer
+}
+.errorsPassword{
+  color: red;
+  position: absolute;
+  left: 32px;
+  top: 264px;
+  font-family: 'Archivo';
+  font-style: normal;
+  font-size: 15px;
+}
+.errorsUsername {
+  color: red;
+  position: absolute;
+  left: 32px;
+  top: 195px;
+  font-family: 'Archivo';
+  font-style: normal;
+  font-size: 15px;
 }
