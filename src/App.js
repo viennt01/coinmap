@@ -1,21 +1,25 @@
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+// import { useEffect, useState } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-// import routes from './routes';
 import Login from './pages/Login';
 import LoginSuccess from './pages/LoginSuccess';
 
-// import { History } from 'history';
-
 function App() {
-  const useLogin = localStorage.getItem('coinMapLogin');
+  // const [isLogin, setIsLogin] = useState(false);
+  // useEffect( ()=> {
+  //   if(localStorage.getItem('coinMapLogin')){
+  //     setIsLogin(true);
+  //   }
+  //   // eslint-disable-next-line
+  // },[localStorage.getItem('coinMapLogin')])
   return (
     <div className="App-container">
       <div className='App'>
           <BrowserRouter>
             <Switch>
               <Route path="/" exact component={Login} />
-              {useLogin && <Route path="/loginSuccess" component={LoginSuccess}  /> } 
-              {/* <Route path="/loginSuccess" component={LoginSuccess}  /> */}
+              {/* {isLogin && <Route path="/loginSuccess" component={LoginSuccess}  /> }  */}
+              <Route path="/loginSuccess" component={LoginSuccess}  />
             </Switch>
           </BrowserRouter>
       </div>

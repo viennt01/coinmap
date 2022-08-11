@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import {validateLogin} from '../validateInput/validateInput';
 
@@ -7,7 +7,6 @@ import Footer from '../Footer';
 import Header from '../Header';
 import useForm from '../../hooks/useForm'
 import {useHistory} from 'react-router-dom'
-
 
 function LoginHome() {
   const history = useHistory();
@@ -43,6 +42,7 @@ function LoginHome() {
         console.error(err);
       });
   }
+
   const { values, errors, handleChange, handleSubmit } = useForm(
     postLogin,
     validateLogin
