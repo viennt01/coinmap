@@ -9,14 +9,16 @@ import LoginSuccess from './pages/LoginSuccess';
 function App() {
   const useLogin = localStorage.getItem('coinMapLogin');
   return (
-    <div className='App'>
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" exact component={Login} />
-            {useLogin && <Route path="/loginSuccess" component={LoginSuccess}  /> } 
-            {/* <Route path="/loginSuccess" component={LoginSuccess}  /> */}
-          </Switch>
-        </BrowserRouter>
+    <div className="App-container">
+      <div className='App'>
+          <BrowserRouter>
+            <Switch>
+              <Route path="/" exact component={Login} />
+              {useLogin && <Route path="/loginSuccess" component={LoginSuccess}  /> } 
+              {/* <Route path="/loginSuccess" component={LoginSuccess}  /> */}
+            </Switch>
+          </BrowserRouter>
+      </div>
     </div>
   );
 }

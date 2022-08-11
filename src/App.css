@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  /* position: relative; */
+  margin: auto;
+}
+.App-container {
+  display: flex;
+  align-items: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
